@@ -215,21 +215,24 @@ function initContactForm() {
                 return;
             }
 
-            // Show success message
-            showNotification('Terima kasih! Pesan Anda telah dikirim. Kami akan merespons secepatnya.', 'success');
+            const supportEmailElement = document.querySelector('a[href^="mailto:"]');
+            const supportEmail = supportEmailElement
+                ? supportEmailElement.getAttribute('href').replace('mailto:', '')
+                : 'jayidevtech@gmail.com';
 
-            // Reset form
+            const subject = `Pesan dari Landing Page - ${name}`;
+            const body = [
+                `Nama: ${name}`,
+                `Email: ${email}`,
+                '',
+                'Pesan:',
+                message
+            ].join('\n');
+
+            const mailtoUrl = `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoUrl;
             this.reset();
-
-            // In a real application, you would send the form data to a server here
-            // Example:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({ name, email, message })
-            // }).then(response => response.json())
-            //   .then(data => console.log(data))
-            //   .catch(error => console.error('Error:', error));
         });
     }
 }

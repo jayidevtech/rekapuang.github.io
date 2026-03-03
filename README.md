@@ -137,22 +137,22 @@ Landing page fully responsive pada semua ukuran!
 ## 📞 Update Contact Information
 
 ### Email Support
-File: `index.html` (search for `support@jayidevtech.com`)
+File: `index.html` (search for `jayidevtech@gmail.com`)
 ```html
-<a href="mailto:support@jayidevtech.com">support@jayidevtech.com</a>
+<a href="mailto:jayidevtech@gmail.com">jayidevtech@gmail.com</a>
 ```
 
 ### Download Links
 Update untuk Play Store & App Store di section "Download":
 ```html
-<a href="https://play.google.com/store/apps/details?id=com.yourapp">
+<a href="https://play.google.com/apps/testing/com.jayidevtech.rekapuang">
 <a href="https://apps.apple.com/app/id123456789">
 ```
 
 ### Website Link
 Update di footer:
 ```html
-<a href="https://www.jayidevtech.com">www.jayidevtech.com</a>
+<a href="https://jayidevtech.github.io">jayidevtech.github.io</a>
 ```
 
 ## 🚀 Deployment
@@ -257,7 +257,7 @@ Project ini dibuat oleh JAYIDEVTECH. Bebas untuk digunakan dan dimodifikasi sesu
 ## 🤝 Support
 
 Jika ada pertanyaan atau issue:
-- 📧 Email: support@jayidevtech.com
+- 📧 Email: jayidevtech@gmail.com
 - 🐛 Report bugs via contact form
 - 💡 Kirim feedback untuk improvements
 
