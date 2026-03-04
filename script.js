@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQAccordion();
     initContactForm();
     initScreenshotSlider();
+    initTestingModal();
 });
 
 /* ============================================
@@ -498,6 +499,46 @@ document.addEventListener('keydown', function(event) {
 /* ============================================
    CONSOLE LOG
    ============================================ */
+
+/* ============================================
+   TESTING MODAL
+   ============================================ */
+
+function initTestingModal() {
+    const modal = document.getElementById('testingModal');
+    const openBtn = document.getElementById('openTestingPopup');
+    const closeBtn = document.getElementById('closeTestingModal');
+
+    if (!modal || !openBtn || !closeBtn) return;
+
+    // Open modal
+    openBtn.addEventListener('click', function() {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+
+    // Close modal when clicking X button
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
 
 console.log('%cRekap Uang Landing Page', 'font-size: 24px; font-weight: bold; color: #2563eb;');
 console.log('%cKelola keuangan dengan mudah, cerdas, dan aman.', 'font-size: 16px; color: #64748b;');

@@ -600,9 +600,9 @@
                         <p><i class="fas fa-check"></i> Version 1.0.0 & ~40MB</p>
                         <p><i class="fas fa-check"></i> Native Performance</p>
                     </div>
-                    <a href="https://play.google.com/apps/testing/com.jayidevtech.rekapuang" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                    <button id="openTestingPopup" class="btn btn-primary btn-large">
                         <i class="fab fa-google-play"></i> Ikuti Pengujian Tertutup
-                    </a>
+                    </button>
                 </div>
 
                 <div class="download-card ios">
@@ -818,6 +818,51 @@
     <button class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Testing Popup Modal -->
+    <div id="testingModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeTestingModal">&times;</span>
+            <h2 class="modal-title">Bergabung Pengujian Tertutup</h2>
+            
+            <div class="modal-body">
+                <div class="instruction-section">
+                    <h3 class="instruction-title">
+                        <i class="fas fa-mobile-alt"></i> Bergabung Google Groups
+                    </h3>
+                    <p class="instruction-subtitle">
+                        Anda harus bergabung dengan grup pengujian tertutup di Google Groups untuk mendapatkan akses awal ke aplikasi Rekap Uang.
+                    </p>
+                    
+                    <ol class="instruction-steps">
+                        <li>
+                            <strong>Buka Browser:</strong> Buka Chrome, Firefox atau Safari.
+                        </li>
+                        <li>
+                            <strong>Akses Link:</strong> Kunjungi <code><a href="https://groups.google.com">https://groups.google.com</a></code> <br />atau cari "Google Groups" di Google.
+                        </li>
+                        <li>
+                            <strong>Cari Nama Grup:</strong> Masukkan <code>Tester Rekap Uang</code> di kolom pencarian.
+                        </li>
+                        <li>
+                            <strong>Ketuk Nama Grup:</strong> Pilih grup yang sesuai dari daftar.
+                        </li>
+                        <li>
+                            <strong>Klik Ikon Gabung:</strong> Biasanya berupa tombol bertuliskan <em>Minta untuk bergabung ke group</em> atau ikon "orang dengan tanda plus" di bagian atas layar.
+                        </li>
+                        <li>
+                            <strong>Selesaikan Pengaturan:</strong> Pilih preferensi pengiriman email dan klik <em>Join</em>.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="modal-footer-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Setelah bergabung dengan grup, Anda akan mendapatkan akses untuk mengunduh dan menguji aplikasi Rekap Uang melalui link berikut: <code><a href="https://play.google.com/apps/testing/com.jayidevtech.rekapuang">https://play.google.com/apps/testing/com.jayidevtech.rekapuang</a></code></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
