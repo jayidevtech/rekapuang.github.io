@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>Rekap Uang</title>
+    <script>
+      // GitHub Pages SPA redirect trick (sessionStorage method)
+      // Saves the full URL to sessionStorage then redirects to root.
+      // index.html reads it back and restores the path via history.replaceState.
+      sessionStorage.redirect = location.href;
+      location.replace(
+        location.protocol + '//' + location.host + location.pathname.split('/').slice(0, 1).join('/')
+      );
+    </script>
+  </head>
+  <body>Redirecting...</body>
+</html>
