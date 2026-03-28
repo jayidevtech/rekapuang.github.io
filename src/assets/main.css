@@ -1,0 +1,377 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1e40af;
+  --color-brand-secondary: #1e293b;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  --font-family-primary: 'Inter', sans-serif;
+  --font-family-secondary: 'Inter', sans-serif;
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family-secondary);
+  overflow-x: hidden;
+}
+
+/* ============================================
+   PHONE MOCKUP
+   ============================================ */
+.phone-mockup {
+  width: 280px;
+  height: 610px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.phone-notch {
+  width: 100px;
+  height: 24px;
+  background: #0f172a;
+  border-radius: 0 0 16px 16px;
+  margin: 0 auto 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.phone-screen {
+  width: 100%;
+  height: calc(100% - 50px);
+  background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+}
+
+.phone-bottom {
+  width: 80px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+/* Screenshot slider */
+.screenshot-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.screenshot-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.screenshot-slide.active {
+  opacity: 1;
+}
+
+.app-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Slide indicators */
+.slide-indicators {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #808080;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.indicator.active {
+  background: #2563eb;
+  transform: scale(1.3);
+}
+
+/* ============================================
+   HERO GRADIENT BACKGROUND
+   ============================================ */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 50%, #faf5ff 100%);
+  z-index: 0;
+}
+
+/* ============================================
+   SECTION ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.will-animate {
+  opacity: 0;
+}
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-chevron {
+  transition: transform 0.3s ease;
+}
+
+/* ============================================
+   NOTIFICATION TOAST
+   ============================================ */
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+.toast-enter {
+  animation: slideInRight 0.3s ease forwards;
+}
+
+.toast-leave {
+  animation: slideOutRight 0.3s ease forwards;
+}
+
+/* ============================================
+   HAMBURGER MENU
+   ============================================ */
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1e293b;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ============================================
+   POLICY PAGE
+   ============================================ */
+.policy-content h2 {
+  @apply text-2xl font-semibold text-slate-800 mt-8 mb-4;
+}
+
+.policy-content h3 {
+  @apply text-lg font-semibold text-slate-700 mt-6 mb-3;
+}
+
+.policy-content h4 {
+  @apply text-base font-semibold text-slate-700 mt-4 mb-2;
+}
+
+.policy-content p {
+  @apply text-slate-600 mb-4 leading-relaxed;
+}
+
+.policy-content ul {
+  @apply space-y-2 mb-4;
+}
+
+.policy-content li {
+  @apply flex items-start gap-2 text-slate-600;
+}
+
+.policy-content li i {
+  @apply mt-1 shrink-0;
+}
+
+/* ============================================
+   BACK TO TOP
+   ============================================ */
+.back-to-top {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.back-to-top.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ============================================
+   PRICING TABLE OVERFLOW FIX
+   ============================================ */
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+html.dark body {
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+html.dark .bg-white {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #0f172a !important;
+}
+
+html.dark .bg-blue-50 {
+  background-color: rgba(37, 99, 235, 0.12) !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+html.dark .shadow-sm,
+html.dark .shadow-md,
+html.dark .shadow-lg,
+html.dark .shadow-xl {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35) !important;
+}
+
+html.dark .hero-bg {
+  background: linear-gradient(135deg, #0b1220 0%, #111827 50%, #0f172a 100%);
+}
+
+html.dark .navbar-wrapper,
+html.dark nav.bg-white {
+  background-color: #111827 !important;
+}
+
+html.dark .hamburger span {
+  background: #e2e8f0;
+}
+
+html.dark input,
+html.dark textarea {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+
+/* Better contrast for legal pages in dark mode */
+html.dark .policy-content h2,
+html.dark .policy-content h3,
+html.dark .policy-content h4 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .policy-content p,
+html.dark .policy-content li,
+html.dark .policy-content span,
+html.dark .policy-content strong {
+  color: #cbd5e1 !important;
+}
+
+html.dark .policy-content .text-blue-600,
+html.dark .policy-content .text-emerald-500,
+html.dark .policy-content .text-red-500 {
+  filter: brightness(1.2) saturate(1.1);
+}
+
+html.dark .policy-content a,
+html.dark .policy-content .hover\:underline {
+  color: #93c5fd !important;
+}

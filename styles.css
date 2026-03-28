@@ -362,7 +362,7 @@ section {
 .phone-mockup {
     position: relative;
     width: 280px;
-    height: 580px;
+    height: 610px;
     background: #fff;
     border-radius: 40px;
     padding: 12px;
@@ -446,7 +446,7 @@ section {
 /* Slide Indicators */
 .slide-indicators {
     position: absolute;
-    bottom: -2rem;
+    bottom: -3rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -459,7 +459,7 @@ section {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: rgba(37, 99, 235, 0.3);
+    background: #808080;
     cursor: pointer;
     transition: var(--transition);
 }
@@ -1818,7 +1818,7 @@ section {
     
     .phone-mockup {
         width: 260px;
-        height: 540px;
+        height: 580px;
         margin: 0 auto;
     }
 
@@ -1976,7 +1976,7 @@ section {
 
     .phone-mockup {
         width: 160px;
-        height: 350px;
+        height: 380px;
         margin: 0 auto;
         padding: 6px;
     }
