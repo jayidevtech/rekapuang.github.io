@@ -116,8 +116,14 @@ Alur deployment:
 2. GitHub Action akan:
    - npm ci
    - npm run build
-   - publish dist ke GitHub Pages memakai peaceiris/actions-gh-pages
+   - upload dist sebagai artifact Pages
+   - deploy artifact ke GitHub Pages memakai actions/deploy-pages
 3. Custom domain dikonfigurasi ke rekapuang.jayidev.tech.
+
+Setting yang harus dipilih di GitHub:
+
+1. Repository Settings -> Pages
+2. Source: GitHub Actions
 
 ## Domain dan Indexing
 
