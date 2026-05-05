@@ -18,6 +18,18 @@ const releases = computed<ReleaseItem[]>(() => (
   isEnglish.value
     ? [
       {
+        version: 'v1.0.1+14',
+        date: '5 May 2026',
+        type: 'minor',
+        items: [
+          'New coachmark onboarding flow with improved step stability',
+          'Edit amount now follows selected currency in transaction and budget forms',
+          'Category relation improvements across Indonesian/English language switching',
+          'Settings page now shows dynamic app version and build number',
+          'Localization and reliability improvements across key user flows',
+        ],
+      },
+      {
         version: 'v1.0.0',
         date: '27 March 2026',
         type: 'major',
@@ -32,6 +44,18 @@ const releases = computed<ReleaseItem[]>(() => (
       },
     ]
     : [
+      {
+        version: 'v1.0.1+14',
+        date: '5 Mei 2026',
+        type: 'minor',
+        items: [
+          'Flow onboarding coachmark baru dengan stabilitas step yang lebih baik',
+          'Amount saat edit transaksi dan budget kini mengikuti mata uang yang dipilih',
+          'Peningkatan relasi kategori saat perpindahan bahasa Indonesia/Inggris',
+          'Halaman Settings kini menampilkan versi dan build number secara dinamis',
+          'Peningkatan localization dan reliability di alur utama aplikasi',
+        ],
+      },
       {
         version: 'v1.0.0',
         date: '27 Maret 2026',

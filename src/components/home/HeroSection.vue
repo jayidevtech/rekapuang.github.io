@@ -50,15 +50,15 @@ const { t, isEnglish } = useLocale()
 
           <!-- Stats -->
           <div class="flex flex-wrap justify-center lg:justify-start gap-8">
-            <div class="border-l-4 border-blue-600 pl-6 py-4 rounded-2xl">
+            <div class="w-full md:w-36 border-l-4 border-blue-600 pl-6 py-4 rounded-2xl">
               <h3 class="mb-2.5 text-3xl font-bold text-blue-600" style="font-family: 'Inter', sans-serif">{{ isEnglish ? 'Free' : 'Gratis' }}</h3>
               <p class="text-slate-500 text-sm">+ Premium</p>
             </div>
-            <div class="border-l-4 border-blue-600 pl-6 py-4 rounded-2xl">
+            <div class="w-full md:w-36 border-l-4 border-blue-600 pl-6 py-4 rounded-2xl">
               <h3 class="mb-2.5 text-3xl font-bold text-blue-600" style="font-family: 'Inter', sans-serif">{{ isEnglish ? 'No' : 'Tanpa' }}</h3>
               <p class="text-slate-500 text-sm">{{ isEnglish ? 'Ads' : 'Iklan' }}</p>
             </div>
-            <div class="border-l-4 border-blue-600 pl-6 py-4 rounded-2xl">
+            <div class="w-full md:w-36 border-l-4 border-blue-600 pl-6 py-4 rounded-2xl">
               <h3 class="mb-2.5 text-3xl font-bold text-blue-600" style="font-family: 'Inter', sans-serif">Private</h3>
               <p class="text-slate-500 text-sm">{{ isEnglish ? 'Secure Data' : 'Data Aman' }}</p>
             </div>
