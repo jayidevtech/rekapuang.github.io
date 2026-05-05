@@ -24,7 +24,7 @@ const { t, isEnglish } = useLocale()
           <h3 class="text-xl font-bold text-slate-800 mb-4" style="font-family: 'Inter', sans-serif">Android</h3>
           <div class="space-y-1.5 text-sm text-slate-600 mb-6 w-full text-left">
             <p class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> {{ isEnglish ? 'Android 7.0 and above' : 'Android 7.0 dan lebih baru' }}</p>
-            <p class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Version 1.0.0 &amp; ~19MB</p>
+            <p class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Version 1.1.0 &amp; ~19MB</p>
             <p class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Native Performance</p>
           </div>
           <a

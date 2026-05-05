@@ -18,8 +18,20 @@ const releases = computed<ReleaseItem[]>(() => (
   isEnglish.value
     ? [
       {
-        version: 'v1.0.1+14',
+        version: 'v1.1.0+15',
         date: '5 May 2026',
+        type: 'minor',
+        items: [
+          'Major stability and performance improvements across core app flows',
+          'Google Sign-In, session restore, Premium status, and scan quota are now more consistent',
+          'Debt/receivable totals can now be synced to transactions without duplicate records',
+          'Synced debt/receivable entries now auto-update or auto-remove when totals change',
+          'Debt menu tutorial and guide actions were refreshed to make the sync flow easier to follow',
+        ],
+      },
+      {
+        version: 'v1.0.1+14',
+        date: '4 May 2026',
         type: 'minor',
         items: [
           'New coachmark onboarding flow with improved step stability',
@@ -45,8 +57,20 @@ const releases = computed<ReleaseItem[]>(() => (
     ]
     : [
       {
-        version: 'v1.0.1+14',
+        version: 'v1.1.0+15',
         date: '5 Mei 2026',
+        type: 'minor',
+        items: [
+          'Peningkatan besar pada stabilitas dan performa di alur utama aplikasi',
+          'Login Google, pemulihan sesi, status Premium, dan kuota scan kini lebih konsisten',
+          'Sinkronisasi total hutang/piutang ke transaksi kini berjalan tanpa data duplikat',
+          'Data sinkronisasi hutang/piutang kini otomatis diperbarui atau dihapus saat total berubah',
+          'Tutorial menu Hutang dan aksi panduan diperbarui agar alur sinkronisasi lebih mudah dipahami',
+        ],
+      },
+      {
+        version: 'v1.0.1+14',
+        date: '4 Mei 2026',
         type: 'minor',
         items: [
           'Flow onboarding coachmark baru dengan stabilitas step yang lebih baik',
